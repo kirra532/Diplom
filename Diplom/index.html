@@ -41,17 +41,23 @@
         <p>Email: info@vkusnyashka.ru</p>
     </section>
 
-    <section id="login">
-        <h2>Личный кабинет</h2>
-        <form id="login-form">
-            <label for="username">Логин:</label>
-            <input type="text" id="username" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" required>
-            <button type="submit">Войти</button>
-        </form>
-        <p id="message"></p>
-    </section>
+   <section id="login">
+    <h2>Личный кабинет</h2>
+    <form id="login-form">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Войти</button>
+    </form>
+    <p id="message"></p>
+    <div id="user-info" style="display: none;">
+        <h3>Добро пожаловать, <span id="user-name"></span>!</h3>
+        <p>Это ваш личный кабинет.</p>
+        <button id="logout-button">Выйти</button>
+    </div>
+</section>
+
 
     <footer>
         <p>&copy; 2026 Кафе "Вкусняшка". Все права защищены.</p>
