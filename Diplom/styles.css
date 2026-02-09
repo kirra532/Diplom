@@ -43,3 +43,23 @@ section {
     padding: 40px 20px;
     margin: 20px 0;
     background: #
+}
+    #reviews {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#reviews-container {
+    margin-bottom: 20px;
+}
+
+#review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review-text {
+    resize: none;
+}
