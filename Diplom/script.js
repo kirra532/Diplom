@@ -10,6 +10,7 @@ const users = {
     'user': 'mypassword'      // Логин: user, Пароль: mypassword
 };
 
+// Обработка отправки формы для логина
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault(); // предотвратить отправку формы
 
@@ -30,4 +31,28 @@ loginForm.addEventListener('submit', (e) => {
 });
 
 // Обработка выхода
-logoutButton.addEventListener
+logoutButton.addEventListener('click', () => {
+    userInfo.style.display = 'none';
+    loginForm.style.display = 'block';
+    message.textContent = '';
+});
+
+// Обработка отправки формы отзыва
+const reviewForm = document.getElementById('review-form');
+const reviewsContainer = document.getElementById('reviews-container');
+
+reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // предотвратить отправку формы
+
+    const reviewText = document.getElementById('review-text').value;
+    
+    // Создание нового элемента отзыва
+    const newReview = document.createElement('p');
+    newReview.textContent = `Вы: "${reviewText}"`;
+    
+    // Добавление нового отзыва в контейнер
+    reviewsContainer.appendChild(newReview);
+    
+    // Очистка текстового поля
+    document.getElementById('review-text').value = '';
+});
